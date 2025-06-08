@@ -45,7 +45,7 @@ let strTitle = (pomodoroCount)=>{
 
 
 
-
+//reset count
 function reset() {
        session.textContent=`#${pomodoroCount}`;
        isrunning = false;
@@ -57,7 +57,7 @@ function reset() {
 }
 
 
-
+//counting mechanism
 function counting(){
     if(!isrunning)
     {
