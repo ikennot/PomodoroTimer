@@ -9,10 +9,11 @@ let pomodoro = {
     ispaused : true,
     isFinished : true,
     isBreak : false,
-    breaks : 0
+    breaks : 1
 
 };
 
+//object converted into variables
 let{seconds,pomodoroMinutes,restMinutes,longRestMinutes,pomodoroCount,countdown,isrunning,ispaused,isBreak,breaks} = pomodoro;
 let minutes = pomodoroMinutes;
 
@@ -20,17 +21,21 @@ function TimerSet() {
     if(!isBreak)
     {
         switch(breaks){
-        case 4: minutes = longRestMinutes;
-        breaks = 0;
+        case 4: 
+        minutes = longRestMinutes;
+        seconds = 0;
+        breaks = 1;
         break;
         default:
          minutes = restMinutes;
+         console.log(breaks);
          breaks++;
         }
            isBreak = true;
            pomodoroCount++;
     }else{
      minutes = pomodoroMinutes;
+     seconds = 0;
      isBreak = false;
     }
 }

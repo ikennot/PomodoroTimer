@@ -7,17 +7,27 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="img/pomodoro-technique.png">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/main-container.css">
     <title>Document</title>
 </head>
 <body>
     <audio class="alarmSound" hidden>
         <source src="audio/Sound Effect - School Bell.mp3" type="audio/mp3">
     </audio>
-    <p class="timer-js">02:00</p>
+    <div class="main-container">
+
+    <div class="timer-container">
+      <p class="timer-js timer"></p>
+    </div>
+   
+    <div class="button-div">
     <button class="start-btn-js">start</button>
     <button class="next-btn-js">next</button>
-        <button class="long-btn-js">long Break</button>
+    <button class="long-btn-js">long Break</button>
+    </div>
     <p class="session"></p>
+    </div>
+    
 </body>
 <script src="javascript/script.js"></script>
 <script src="javascript/Queries.js"></script>
