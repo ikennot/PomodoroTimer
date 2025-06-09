@@ -11,7 +11,20 @@
 
 .timer-container{
     border: white 1px solid;
-    padding: 50px 80px 50px 80px;
+    padding: 100px 80px 100px 80px;
     margin-bottom: 30px;
     border-radius: 180px;
+    text-align: center;
+    color: rgb(184, 182, 182);
 }
+
+.timer-container .timer{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.timer-container .session-info{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
