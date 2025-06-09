@@ -28,7 +28,6 @@ function TimerSet() {
         break;
         default:
          minutes = restMinutes;
-         console.log(breaks);
          breaks++;
         }
            isBreak = true;
@@ -39,12 +38,12 @@ function TimerSet() {
      isBreak = false;
     }
 }
-let strTitle = (pomodoroCount)=>{
-   if(pomodoroCount % 2 == 0)
+let strTitle = (isBreak)=>{
+   if(isBreak)
    {
-      return 'Break Time!';
+      return 'BREAK TIME!';
    } else {
-      return 'Time to focus!';
+      return 'FOCUS SESSION';
    }
 }
 
@@ -58,7 +57,8 @@ function reset() {
         clearInterval(countdown);
         TimerSet();
         displayTime();
-        document.querySelector('.start-btn-js').textContent =`start`;
+        document.querySelector('.start-btn-js').innerHTML =`<img src="img/play.png">`;
+        
 }
 
 
@@ -69,7 +69,7 @@ function counting(){
      isrunning=true;
      ispaused = false;
      isFinished = false;
-     document.querySelector('.start-btn-js').textContent =`Pause`;
+     document.querySelector('.start-btn-js').innerHTML =`<img src="img/pause.png">`;
      countdown = setInterval(()=>{
      if(seconds === 0){
               minutes--;
@@ -90,7 +90,7 @@ function counting(){
         ispaused = true;
         clearInterval(countdown);
         document.querySelector('.timer-js').textContent=`${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
-        document.querySelector('.start-btn-js').textContent='resume';        
+        document.querySelector('.start-btn-js').innerHTML=`<img src="img/play.png">`;        
     }
    
 

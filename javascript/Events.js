@@ -6,6 +6,7 @@ startbtn.addEventListener('click',()=>{
 
 let nextbtn = document.querySelector('.next-btn-js');
 nextbtn.addEventListener('click',()=>{
+  seconds = 0;
   reset();
 })
 
