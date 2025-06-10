@@ -5,8 +5,13 @@
     column-gap: 20px;
 }
 
-.circle-indicators div{
-    background-color: red;
+.c1,.c2,.c3,.c4{
+    background-color:  rgb(78, 78, 78);
     height: 30px;
     border-radius: 15px;
 }
+
+.started{
+    background-color: red;
+}
+

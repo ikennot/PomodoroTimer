@@ -36,6 +36,8 @@ function TimerSet() {
      minutes = pomodoroMinutes;
      seconds = 0;
      isBreak = false;
+     document.querySelector(`.c${pomodoro.breaks}`).classList.add("started");
+
     }
 }
 let strTitle = (isBreak)=>{
@@ -64,6 +66,7 @@ function reset() {
 
 //counting mechanism
 function counting(){
+    
     if(!isrunning)
     {
      isrunning=true;
