@@ -2,6 +2,7 @@
   flex: 1;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 19px;
 }
 
 .btn{
@@ -11,6 +12,7 @@
     border: none;
     border-radius: 40px;
     background-color: rgb(29, 29, 29);
+    cursor: pointer;
 }
 
 .btn img{

@@ -1,0 +1,12 @@
+.circle-indicators{
+    display: grid;
+
+    grid-template-columns: 30px 30px 30px 30px;
+    column-gap: 20px;
+}
+
+.circle-indicators div{
+    background-color: red;
+    height: 30px;
+    border-radius: 15px;
+}

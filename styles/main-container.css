@@ -3,8 +3,10 @@
     flex-direction: column;
     align-items: center;
     padding: 50px;
-    border: white 3px solid;
-    height:fit-content
+    border: rgb(78, 78, 78) 1px solid;
+    height:fit-content;
+    margin-top: 20px;
+    border-radius: 15px;
 }
 
 .timer{
