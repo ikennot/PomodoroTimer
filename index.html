@@ -7,17 +7,22 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="img/pomodoro-technique.png">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/main-container.css">
+    <link rel="stylesheet" href="styles/timer-container.css">
     <link rel="stylesheet" href="styles/buttons.css">
     <link rel="stylesheet" href="styles/indicators.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <title></title>
 </head>
 <body>
     <audio class="alarmSound" hidden>
         <source src="audio/Sound Effect - School Bell.mp3" type="audio/mp3">
     </audio>
-    <div class="main-container">
-
+    <div class="main-outer-container">
+        <header class="pomodoro-header">
+            <div class="title"> <img src="img/pomodoro-technique.png"><p>POMODORO TIMER</p></div>
+            <div class="settings"><img src="img/settings.png"></div>
+        </header>
+    <div class="main-timer-container">
     <div class="timer-container">
       <p class="timer-js timer"></p>
       <p class="session-info-js session-info"></p>
@@ -35,8 +40,9 @@
          <div class="c3"></div>
          <div class="c4"></div>
     </div>
-    <p class="session"></p>
     </div>
+    </div>
+
     
 </body>
 <script src="javascript/script.js"></script>

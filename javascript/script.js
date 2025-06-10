@@ -3,7 +3,6 @@ let pomodoro = {
     pomodoroMinutes : 25,
     restMinutes : 5,
     longRestMinutes : 15,
-    pomodoroCount : 1,
     countdown : 0,
     isrunning :  false,
     ispaused : true,
@@ -14,10 +13,10 @@ let pomodoro = {
 };
 
 //object converted into variables
-let{seconds,pomodoroMinutes,restMinutes,longRestMinutes,pomodoroCount,countdown,isrunning,ispaused,isBreak,breaks} = pomodoro;
-let minutes = pomodoroMinutes;
-
+let{seconds,pomodoroMinutes,restMinutes,longRestMinutes,countdown,isrunning,ispaused,isBreak,breaks} = pomodoro;
+let minutes = pomodoroMinutes;   document.querySelector(`.c${breaks}`).classList.add("started");
 function TimerSet() {
+    
     if(!isBreak)
     {
         switch(breaks){
@@ -31,14 +30,19 @@ function TimerSet() {
          breaks++;
         }
            isBreak = true;
-           pomodoroCount++;
     }else{
+        if(breaks === 1)
+        {
+         for(let i = breaks+1; i <= 4; i++)
+            document.querySelector(`.c${i}`).classList.remove("started");
+        }
      minutes = pomodoroMinutes;
      seconds = 0;
      isBreak = false;
-     document.querySelector(`.c${pomodoro.breaks}`).classList.add("started");
-
+    document.querySelector(`.c${breaks}`).classList.add("started");
     }
+
+
 }
 let strTitle = (isBreak)=>{
    if(isBreak)
@@ -53,7 +57,6 @@ let strTitle = (isBreak)=>{
 
 //reset count
 function reset() {
-       session.textContent=`#${pomodoroCount}`;
        isrunning = false;
          isFinished = true;
         clearInterval(countdown);
@@ -66,7 +69,6 @@ function reset() {
 
 //counting mechanism
 function counting(){
-    
     if(!isrunning)
     {
      isrunning=true;
@@ -101,4 +103,14 @@ function counting(){
 
 
 
+}
+
+
+function longBreak() {
+    for(let i = 2; i <= 4; i++){
+    document.querySelector(`.c${i}`).classList.add("started");
+    }
+    isBreak = false;
+    breaks = 4;
+          reset();
 }

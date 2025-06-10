@@ -1,5 +1,6 @@
 let startbtn = document.querySelector('.start-btn-js');
 startbtn.addEventListener('click',()=>{
+
     counting();
 })
 
