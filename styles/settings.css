@@ -1,0 +1,9 @@
+.settings-on{
+    top: 100px;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    border-radius: 20px;
+}

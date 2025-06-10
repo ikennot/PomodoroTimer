@@ -9,10 +9,10 @@ body{
 
 
 .main-outer-container{
-  border: rgb(78, 78, 78) 1px solid;
-   border-radius: 15px;
       display: flex;
     flex-direction: column;
-    align-items: center;
- 
+  justify-content: center;
+  flex-shrink: 0;
+
+
 }

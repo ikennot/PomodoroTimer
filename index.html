@@ -11,16 +11,18 @@
     <link rel="stylesheet" href="styles/buttons.css">
     <link rel="stylesheet" href="styles/indicators.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/settings.css">
     <title></title>
 </head>
 <body>
     <audio class="alarmSound" hidden>
         <source src="audio/Sound Effect - School Bell.mp3" type="audio/mp3">
     </audio>
+    <div class="settings-off "></div>
     <div class="main-outer-container">
         <header class="pomodoro-header">
             <div class="title"> <img src="img/pomodoro-technique.png"><p>POMODORO TIMER</p></div>
-            <div class="settings"><img src="img/settings.png"></div>
+            <button class="settings"><img src="img/settings.png"></button>
         </header>
     <div class="main-timer-container">
     <div class="timer-container">
@@ -45,8 +47,10 @@
 
     
 </body>
+
 <script src="javascript/script.js"></script>
 <script src="javascript/Queries.js"></script>
 <script src="javascript/Events.js"></script>
+<script src="javascript/settings.js"></script>
 <script src="javascript/testScript.js"></script>
 </html>

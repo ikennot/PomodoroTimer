@@ -4,7 +4,10 @@
     align-items: center;
     padding: 50px;
     height:fit-content;
-    margin-top: 20px;
+    margin-top: -1px;
+    border: rgb(78, 78, 78) 1px solid;
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
 }
 
 .timer{

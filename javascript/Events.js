@@ -16,3 +16,12 @@ let longbtn = document.querySelector('.long-btn-js');
 longbtn.addEventListener('click',()=>{
     longBreak();
 })
+
+
+let settingsbtn = document.querySelector('.settings');
+settingsbtn.addEventListener('click',()=>{
+  document.querySelector('.settings-off').classList.add("settings-on");
+  document.querySelector('.settings-on').innerHTML=`
+ <p>Settings</p>
+`;
+})
