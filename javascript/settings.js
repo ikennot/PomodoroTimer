@@ -24,3 +24,19 @@ settings.innerHTML=`
 `;
 }
 
+function customPomodoro(){
+ let pomodoroMin = document.querySelector('.pomodoro-Value-js');
+let shortMin = document.querySelector('.short-Value-js');
+let longMin = document.querySelector('.long-Value-js');
+  let pomodoroTime = Number(pomodoroMin.value);
+  let shortTime = Number(shortMin.value);
+  let longTime = Number(longMin.value);
+
+
+  pomodoro.pomodoroMinutes=pomodoroTime;
+  pomodoro.longRestMinutes=longTime;
+  pomodoro.restMinutes=shortTime;
+  
+  
+
+}

@@ -14,9 +14,10 @@ let pomodoro = {
 
 //object converted into variables
 let{seconds,pomodoroMinutes,restMinutes,longRestMinutes,countdown,isrunning,ispaused,isBreak,breaks} = pomodoro;
-let minutes = pomodoroMinutes;   document.querySelector(`.c${breaks}`).classList.add("started");
+let minutes = pomodoroMinutes;   
+document.querySelector(`.c${breaks}`).classList.add("started");
 function TimerSet() {
-    
+    console.log(pomodoro);
     if(!isBreak)
     {
         switch(breaks){

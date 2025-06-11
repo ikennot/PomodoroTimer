@@ -25,8 +25,12 @@ settingsbtn.addEventListener('click',()=>{
 })
 
 document.addEventListener('click', (e) => {
+   
+   
   if (e.target.classList.contains('save-btn')) {
+    customPomodoro();
     document.querySelector('.settings-off').innerHTML =``;
     document.querySelector('.settings-off').classList.remove("settings-on");
+
   }
 });
