@@ -21,7 +21,12 @@ longbtn.addEventListener('click',()=>{
 let settingsbtn = document.querySelector('.settings');
 settingsbtn.addEventListener('click',()=>{
   document.querySelector('.settings-off').classList.add("settings-on");
-  document.querySelector('.settings-on').innerHTML=`
- <p>Settings</p>
-`;
+  addHtml();
 })
+
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('save-btn')) {
+    document.querySelector('.settings-off').innerHTML =``;
+    document.querySelector('.settings-off').classList.remove("settings-on");
+  }
+});
