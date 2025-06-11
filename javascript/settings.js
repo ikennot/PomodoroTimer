@@ -6,17 +6,17 @@ settings.innerHTML=`
 <div class="title">Settings</div>
         <div class="pomodoro-custom">
             <p>Pomodoro</p>
-        <input type="number" value="25" class="pomodoro-Value-js input-value">
+        <input type="number" value="${pomodoro.pomodoroMinutes}" class="pomodoro-Value-js input-value">
         </div>
         
         <div class="short-custom">
            <p>Short break</p>
-           <input type="number" value="5" class="short-Value-js input-value">
+           <input type="number" value="${pomodoro.restMinutes}" class="short-Value-js input-value">
         </div>
        
         <div class="long-custom">
             <p>Long break</p>
-           <input type="number" value="15" class="long-Value-js input-value">
+           <input type="number" value="${pomodoro.longRestMinutes}" class="long-Value-js input-value">
         </div>
 </div>
 
@@ -38,5 +38,21 @@ let longMin = document.querySelector('.long-Value-js');
   pomodoro.restMinutes=shortTime;
   
   
+({ pomodoroMinutes, restMinutes, longRestMinutes } = pomodoro);
+
+ if(isBreak){
+   switch(breaks){
+        case 4: 
+        minutes = longRestMinutes;
+        seconds = 0;
+        break;
+         default:
+         minutes = restMinutes;
+   } 
+   }else{
+   minutes = pomodoroMinutes;
+   }
+ localStorage.setItem('pomodoro',JSON.stringify(pomodoro));
+ displayTime();
 
 }

@@ -1,23 +1,42 @@
-let pomodoro = {
-    seconds : 0,
-    pomodoroMinutes : 25,
-    restMinutes : 5,
-    longRestMinutes : 15,
-    countdown : 0,
-    isrunning :  false,
-    ispaused : true,
-    isFinished : true,
-    isBreak : false,
-    breaks : 1
+let pomodoro;
 
-};
+try {
+    pomodoro = JSON.parse(localStorage.getItem('pomodoro')) || {
+        seconds : 0,
+        pomodoroMinutes : 25,
+        restMinutes : 5,
+        longRestMinutes : 15,
+        countdown : 0,
+        isrunning :  false,
+        ispaused : true,
+        isFinished : true,
+        isBreak : false,
+        breaks : 1
+    };
+} catch (e) {
+    // fallback if parse fails
+    pomodoro = {
+        seconds : 0,
+        pomodoroMinutes : 25,
+        restMinutes : 5,
+        longRestMinutes : 15,
+        countdown : 0,
+        isrunning :  false,
+        ispaused : true,
+        isFinished : true,
+        isBreak : false,
+        breaks : 1
+    };
+}
 
+
+localStorage.setItem('pomodoro',JSON.stringify(pomodoro));
 //object converted into variables
 let{seconds,pomodoroMinutes,restMinutes,longRestMinutes,countdown,isrunning,ispaused,isBreak,breaks} = pomodoro;
 let minutes = pomodoroMinutes;   
 document.querySelector(`.c${breaks}`).classList.add("started");
 function TimerSet() {
-    console.log(pomodoro);
+    
     if(!isBreak)
     {
         switch(breaks){
@@ -55,8 +74,6 @@ let strTitle = (isBreak)=>{
 }
 
 
-
-//reset count
 function reset() {
        isrunning = false;
          isFinished = true;
