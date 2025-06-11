@@ -107,7 +107,7 @@ function counting(){
         return;
     }
 
-  },10);
+  },1000);
     }else{
        isrunning=false;
         ispaused = true;
